@@ -1,0 +1,113 @@
+@import url("reset.css")
+
+// main-grid
+$main-width: 1200px
+$ctnt-width: 960px
+
+// header
+$header-height: 1.86em
+
+
+// box-sizing reset
+html
+	box-sizing: border-box
+
+*, *:before, *:after
+	box-sizing: inherit
+
+body 
+	font-family: Arial, sans-serif !important
+	font-size: 14px
+
+.container-fluid
+	max-width: $main-width
+
+.container
+	max-width: $ctnt-width	
+
+
+div.cntn-wrapper
+	padding: 0
+
+#header 
+	width: 100%
+	height: $header-height
+	background: black
+	color: white
+	font-size: 0.79em //11px
+	text-transform: uppercase
+	.contact-phone
+		font-size: 1.09em //12px
+
+#header hr
+	border-left: 1px solid rgb(68,68,68) !important
+	display: inline-block
+	height: $header-height !important
+	margin: 0 !important
+	width: 0
+
+
+#navigation
+	height: 6.56em //105px
+	font-size: 1.14em //16px
+	border: 1px solid green //remove
+
+#nav-menu-new, #nav-menu-designers, #nav-menu-woman, #nav-menu-man, #nav-menu-clearance
+	display: inline-block
+
+.vert-align
+	line-height: 6.56em
+.vert-align.navigation 
+	line-height: 2em	
+	margin-top: 2em
+
+@mixin nav-menu ($hover-background-color, $width, $padding)
+	
+	background-color: inherit	
+	ul.nav-menu
+		list-style-type: none
+		position: relative
+		margin: 0
+		li 
+			display: inline-block
+			width: $width
+			&:hover
+				background: $hover-background-color
+				ul 
+					display: block
+					width: 100%
+			a 
+				text-decoration: none
+				color: inherit
+				display: block
+				padding: $padding
+		ul.dropdown
+			display: none
+			position: absolute
+			li 
+				display: block
+				background: $hover-background-color
+				z-index: 1000	
+				a:hover
+					color: #099
+
+.nav-menu-currency
+	@include nav-menu(lighten(black, 30%), 4em, 0.3em)
+	// font-size: 1em				
+	
+
+#nav-menu-new
+	@include nav-menu(darken(white, 5%), 4em, .3em)
+#nav-menu-designers
+	@include nav-menu(darken(white, 5%), 6em, .3em)
+#nav-menu-woman
+	@include nav-menu(darken(white, 5%), 5em, .3em)
+#nav-menu-man
+	@include nav-menu(darken(white, 5%), 4em, .3em)
+#nav-menu-clearance
+	@include nav-menu(darken(white, 5%), 6em, .3em)
+
+	
+
+
+
