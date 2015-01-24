@@ -18,43 +18,55 @@
  
 </head>
 <body>
-	<!-- HEADER -->
-	<div class="container-fluid" id="header">
-		<div class="container cntn-wrapper">
-				
-				<span class="pull-right">My account</span>
-				
-				<span>Custom care: <span class="contact-phone">888-23-4567</span></span>
 
-				<hr class="pull-right"/>
- 				<div class="nav-menu-currency pull-right">
- 					<ul class="nav-menu">
- 						<li><a href="#">$US <span class="caret"></span></a>
- 							
-							<ul class="dropdown">
-								<li><a href="#">EUR</a></li>
-								<li><a href="#">UAH</a></li>
-								<li><a href="#">GBP</a></li>
-							</ul>
- 						</li>
- 					</ul>
- 				</div>
- 				<hr class="pull-right"/>
+	<!-- bootstrap nav -->
+	<div class="container-fluid no-padding" id="top-nav">
+			
+		<nav class="navbar navbar-inverse">
+			<div class="container no-padding">
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse no-padding" id="navbar-collapse">
+					<span class="glyphicon glyphicon-search navbar-right" aria-hidden="true"></span>
+					<hr class="navbar-right">
+					<a href="#" class="navbar-link navbar-right navbar-text">
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>My account</a>
+					<p class="navbar-text nav-contact-info">Custom care: <span class="contact-phone">888-23-4567</span></p>
+					<!-- <p class="navbar-text"></p> -->
 
-		</div> <!-- container-fluid-->
-	</div> <!-- wrapper -->
+					<hr class="navbar-right">
+
+					<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$ US <span class="caret"></span></a>
+					  <ul class="dropdown-menu" role="menu">
+						<li><a href="#">&euro; EUR</a></li>
+						<li><a href="#">&pound; GBP</a></li>
+						<li><a href="#">&#165; JPY</a></li>
+					  </ul>
+					</li>
+					</ul>
+				  
+					<hr class="navbar-right">
+				
+				</div><!-- /.navbar-collapse -->
+			  <!-- </div>/.container-fluid -->
+		  </div>
+		</nav>	
+		
+	</div>
+	<!-- end bootstrap nav -->
 	
 	<!-- NAVIGATION -->
 	<div class="container-fluid" id="navigation">
-		<div class="container cntn-wrapper">
+		<div class="container no-padding">
 			<div class="row">
 				<div class="logo col-md-2 vert-align">
 					<a href="#"><img src="images/logo.png" alt="site logo"></a>
 				</div>
 				<div class="navigation col-sm-8 vert-align text-right">
 					<div id="nav-menu-new">
-	 					<ul class="nav-menu">
-	 						<li><a href="#">new <span class="caret"></span></a>
+						<ul class="nav-menu">
+							<li><a href="#">new <span class="caret"></span></a>
 								<ul class="dropdown">
 									<li><a href="#">new 1</a></li>
 									<li><a href="#">new 2</a></li>
@@ -62,12 +74,12 @@
 									<li><a href="#">new 4</a></li>
 									<li><a href="#">new 5</a></li>
 								</ul>
-	 						</li>
-	 					</ul>
-	 				</div>					
-	 				<div id="nav-menu-designers">
-	 					<ul class="nav-menu">
-	 						<li><a href="#">designers <span class="caret"></span></a>
+							</li>
+						</ul>
+					</div>					
+					<div id="nav-menu-designers">
+						<ul class="nav-menu">
+							<li><a href="#">designers <span class="caret"></span></a>
 								<ul class="dropdown">
 									<li><a href="#">designers 1</a></li>
 									<li><a href="#">designers 2</a></li>
@@ -75,12 +87,12 @@
 									<li><a href="#">designers 4</a></li>
 									<li><a href="#">designers 5</a></li>
 								</ul>
-	 						</li>
-	 					</ul>
-	 				</div>
-	 				<div id="nav-menu-woman">
-	 					<ul class="nav-menu">
-	 						<li><a href="#">woman <span class="caret"></span></a>
+							</li>
+						</ul>
+					</div>
+					<div id="nav-menu-woman">
+						<ul class="nav-menu">
+							<li><a href="#">woman <span class="caret"></span></a>
 								<ul class="dropdown">
 									<li><a href="#">woman 1</a></li>
 									<li><a href="#">woman 2</a></li>
@@ -89,12 +101,12 @@
 									<li><a href="#">woman 5</a></li>
 									
 								</ul>
-	 						</li>
-	 					</ul>
-	 				</div>
-	 				<div id="nav-menu-man">
-	 					<ul class="nav-menu">
-	 						<li><a href="#">man <span class="caret"></span></a>
+							</li>
+						</ul>
+					</div>
+					<div id="nav-menu-man">
+						<ul class="nav-menu">
+							<li><a href="#">man <span class="caret"></span></a>
 								<ul class="dropdown">
 									<li><a href="#">man 1</a></li>
 									<li><a href="#">man 2</a></li>
@@ -102,12 +114,12 @@
 									<li><a href="#">man 4</a></li>
 									<li><a href="#">man 5</a></li>
 								</ul>
-	 						</li>
-	 					</ul>
-	 				</div>
-	 				<div id="nav-menu-clearance">
-	 					<ul class="nav-menu">
-	 						<li><a href="#">clearance <span class="caret"></span></a>
+							</li>
+						</ul>
+					</div>
+					<div id="nav-menu-clearance">
+						<ul class="nav-menu">
+							<li><a href="#">clearance <span class="caret"></span></a>
 								<ul class="dropdown">
 									<li><a href="#">clearance 1</a></li>
 									<li><a href="#">clearance 2</a></li>
@@ -115,13 +127,17 @@
 									<li><a href="#">clearance 4</a></li>
 									<li><a href="#">clearance 5</a></li>
 								</ul>
-	 						</li>
-	 					</ul>
-	 				</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div class="cart col-md-2 vert-align"></div>
 			</div> <!--row-->
 		</div> 	
 	</div>
+	
+
+	
+
 </body>
 </html>
