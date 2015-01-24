@@ -29,8 +29,13 @@ body
 .no-padding
 	padding: 0
 
+// .dropdown:hover .dropdown-menu 
+// 	display: block
+
 #top-nav
 	color: white
+	.container
+		position: relative
 	.navbar
 		border-radius: 0
 		height: $header-height 
@@ -40,7 +45,12 @@ body
 		margin: 0 1em
 		color: inherit
 		text-transform: uppercase
-		font-size: 0.79em		 				
+		font-size: 0.79em	
+	.dropdown-menu
+		$dropdown-menu-currency-width: 5.3em
+		width: $dropdown-menu-currency-width	
+		min-width: $dropdown-menu-currency-width	
+		margin-top: .3em 				
 	a.dropdown-toggle
 		padding: 0 1em
 		color: inherit
@@ -65,74 +75,99 @@ body
 		color: white
 		margin-left: 1em
 		margin-top: .3em
-	
+		margin-right: 0
+		&:hover
+			color: rgb(100,150,200)
+			cursor: pointer
 	.glyphicon-user
 		color: rgb(102,102,102) 
 		margin: .5em		
-
-
-
-#navigation
-	height: 6.56em //105px
-	font-size: 1.14em //16px
-	border: 1px solid green //remove
-
-#nav-menu-new, #nav-menu-designers, #nav-menu-woman, #nav-menu-man, #nav-menu-clearance
-	display: inline-block
-
-.vert-align
-	line-height: 6.56em
-.vert-align.navigation 
-	line-height: 2em	
-	margin-top: 2em
-	
-@mixin nav-menu ($hover-background-color, $width, $padding)
-	
-	background-color: inherit	
-	ul.nav-menu
-		list-style-type: none
-		position: relative
+	.search-input
+		border-radius: 5px
+		border: 1px solid #ccc
+		box-shadow: 4px 4px 10px 5px rgba(189,189,189,0.56)
+		color: black
+		display: none
+		font-size: 18px
+		height: 25px
+		max-height: 40px
+		position: absolute
+		right: 0
+		top: 27px
+		width: 0
+		z-index: 1
+		
+// MAIN MENU NAV
+$cart-border: 2px solid rgb(214,214,214)
+$cart-width: 220px
+$cart-height: 65px
+$cart-font-color: #949393
+#menu-nav
+	background: white
+	color: black
+	font-size: 1.14em
+	.navbar 
+		background-color: inherit
+		border-radius: 0
 		margin: 0
-		li 
-			display: inline-block
-			width: $width
+		border: none
+	a
+		color: inherit		
+	.cart-container
+		border: $cart-border
+		box-sizing: content-box
+		color: $cart-font-color
+		float: left
+		height: $cart-height
+		margin-right: 0 !important
+		margin: 15px
+		position: relative
+		width: $cart-width
+		.cart-top
+			font-size: 0.75em
+			border-bottom: 	$cart-border
+			height: $cart-height/2-2
 			&:hover
-				background: $hover-background-color
-				ul 
-					display: block
-					width: 100%
-			a 
-				text-decoration: none
-				color: inherit
-				display: block
-				padding: $padding
-		ul.dropdown
+				cursor: pointer
+			.cart-text
+				position: absolute
+				top: 8px
+				left: 10px
+			.caret
+				position: absolute
+				right: 10px
+				top: 10px
+		.cart-bottom
+			text-transform: uppercase
+			box-sizing: content-box
+			background: rgb(250,250,250) 
+			height: $cart-height/2
+			font-size: 0.69em
+			img
+				position: absolute
+				top: 40px
+				left: 10px
+			.cart-data-group
+				position: absolute
+				top: 43px
+				right: 10px
+		.cart-items
+			background: white
+			border: $cart-border
 			display: none
+			height: 100px
+			margin-left: -2px
 			position: absolute
-			li 
-				display: block
-				background: $hover-background-color
-				z-index: 1000	
-				a:hover
-					color: #099
-
-.nav-menu-currency
-	@include nav-menu(lighten(black, 30%), 4em, 0.3em)
-	// font-size: 1em				
-	
-
-#nav-menu-new
-	@include nav-menu(darken(white, 5%), 4em, .3em)
-#nav-menu-designers
-	@include nav-menu(darken(white, 5%), 6em, .3em)
-#nav-menu-woman
-	@include nav-menu(darken(white, 5%), 5em, .3em)
-#nav-menu-man
-	@include nav-menu(darken(white, 5%), 4em, .3em)
-#nav-menu-clearance
-	@include nav-menu(darken(white, 5%), 6em, .3em)
-
-	
+			top: $cart-height/2-2
+			width: $cart-width
+			z-index: 1
+			&:hover
+				cursor: pointer
+				
+#top-slider
+	background: rgb(246,243,236) 
+	.top-slider-img
+		float: right
 
 
 

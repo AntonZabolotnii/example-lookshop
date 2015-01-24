@@ -18,6 +18,8 @@ body {
 
 #top-nav {
   color: white; }
+  #top-nav .container {
+    position: relative; }
   #top-nav .navbar {
     border-radius: 0;
     height: 1.85714em;
@@ -28,6 +30,10 @@ body {
     color: inherit;
     text-transform: uppercase;
     font-size: 0.79em; }
+  #top-nav .dropdown-menu {
+    width: 5.3em;
+    min-width: 5.3em;
+    margin-top: 0.3em; }
   #top-nav a.dropdown-toggle {
     padding: 0 1em;
     color: inherit; }
@@ -49,198 +55,94 @@ body {
   #top-nav .glyphicon-search {
     color: white;
     margin-left: 1em;
-    margin-top: 0.3em; }
+    margin-top: 0.3em;
+    margin-right: 0; }
+    #top-nav .glyphicon-search:hover {
+      color: #6496c8;
+      cursor: pointer; }
   #top-nav .glyphicon-user {
     color: #666666;
     margin: 0.5em; }
+  #top-nav .search-input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px 5px rgba(189, 189, 189, 0.56);
+    color: black;
+    display: none;
+    font-size: 18px;
+    height: 25px;
+    max-height: 40px;
+    position: absolute;
+    right: 0;
+    top: 27px;
+    width: 0;
+    z-index: 1; }
 
-#navigation {
-  height: 6.56em;
-  font-size: 1.14em;
-  border: 1px solid green; }
-
-#nav-menu-new, #nav-menu-designers, #nav-menu-woman, #nav-menu-man, #nav-menu-clearance {
-  display: inline-block; }
-
-.vert-align {
-  line-height: 6.56em; }
-
-.vert-align.navigation {
-  line-height: 2em;
-  margin-top: 2em; }
-
-.nav-menu-currency {
-  background-color: inherit; }
-  .nav-menu-currency ul.nav-menu {
-    list-style-type: none;
+#menu-nav {
+  background: white;
+  color: black;
+  font-size: 1.14em; }
+  #menu-nav .navbar {
+    background-color: inherit;
+    border-radius: 0;
+    margin: 0;
+    border: none; }
+  #menu-nav a {
+    color: inherit; }
+  #menu-nav .cart-container {
+    border: 2px solid #d6d6d6;
+    box-sizing: content-box;
+    color: #949393;
+    float: left;
+    height: 65px;
+    margin-right: 0 !important;
+    margin: 15px;
     position: relative;
-    margin: 0; }
-    .nav-menu-currency ul.nav-menu li {
-      display: inline-block;
-      width: 4em; }
-      .nav-menu-currency ul.nav-menu li:hover {
-        background: #4d4d4d; }
-        .nav-menu-currency ul.nav-menu li:hover ul {
-          display: block;
-          width: 100%; }
-      .nav-menu-currency ul.nav-menu li a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        padding: 0.3em; }
-    .nav-menu-currency ul.nav-menu ul.dropdown {
+    width: 220px; }
+    #menu-nav .cart-container .cart-top {
+      font-size: 0.75em;
+      border-bottom: 2px solid #d6d6d6;
+      height: 30.5px; }
+      #menu-nav .cart-container .cart-top:hover {
+        cursor: pointer; }
+      #menu-nav .cart-container .cart-top .cart-text {
+        position: absolute;
+        top: 8px;
+        left: 10px; }
+      #menu-nav .cart-container .cart-top .caret {
+        position: absolute;
+        right: 10px;
+        top: 10px; }
+    #menu-nav .cart-container .cart-bottom {
+      text-transform: uppercase;
+      box-sizing: content-box;
+      background: #fafafa;
+      height: 32.5px;
+      font-size: 0.69em; }
+      #menu-nav .cart-container .cart-bottom img {
+        position: absolute;
+        top: 40px;
+        left: 10px; }
+      #menu-nav .cart-container .cart-bottom .cart-data-group {
+        position: absolute;
+        top: 43px;
+        right: 10px; }
+    #menu-nav .cart-container .cart-items {
+      background: white;
+      border: 2px solid #d6d6d6;
       display: none;
-      position: absolute; }
-      .nav-menu-currency ul.nav-menu ul.dropdown li {
-        display: block;
-        background: #4d4d4d;
-        z-index: 1000; }
-        .nav-menu-currency ul.nav-menu ul.dropdown li a:hover {
-          color: #099; }
+      height: 100px;
+      margin-left: -2px;
+      position: absolute;
+      top: 30.5px;
+      width: 220px;
+      z-index: 1; }
+      #menu-nav .cart-container .cart-items:hover {
+        cursor: pointer; }
 
-#nav-menu-new {
-  background-color: inherit; }
-  #nav-menu-new ul.nav-menu {
-    list-style-type: none;
-    position: relative;
-    margin: 0; }
-    #nav-menu-new ul.nav-menu li {
-      display: inline-block;
-      width: 4em; }
-      #nav-menu-new ul.nav-menu li:hover {
-        background: #f2f2f2; }
-        #nav-menu-new ul.nav-menu li:hover ul {
-          display: block;
-          width: 100%; }
-      #nav-menu-new ul.nav-menu li a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        padding: 0.3em; }
-    #nav-menu-new ul.nav-menu ul.dropdown {
-      display: none;
-      position: absolute; }
-      #nav-menu-new ul.nav-menu ul.dropdown li {
-        display: block;
-        background: #f2f2f2;
-        z-index: 1000; }
-        #nav-menu-new ul.nav-menu ul.dropdown li a:hover {
-          color: #099; }
-
-#nav-menu-designers {
-  background-color: inherit; }
-  #nav-menu-designers ul.nav-menu {
-    list-style-type: none;
-    position: relative;
-    margin: 0; }
-    #nav-menu-designers ul.nav-menu li {
-      display: inline-block;
-      width: 6em; }
-      #nav-menu-designers ul.nav-menu li:hover {
-        background: #f2f2f2; }
-        #nav-menu-designers ul.nav-menu li:hover ul {
-          display: block;
-          width: 100%; }
-      #nav-menu-designers ul.nav-menu li a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        padding: 0.3em; }
-    #nav-menu-designers ul.nav-menu ul.dropdown {
-      display: none;
-      position: absolute; }
-      #nav-menu-designers ul.nav-menu ul.dropdown li {
-        display: block;
-        background: #f2f2f2;
-        z-index: 1000; }
-        #nav-menu-designers ul.nav-menu ul.dropdown li a:hover {
-          color: #099; }
-
-#nav-menu-woman {
-  background-color: inherit; }
-  #nav-menu-woman ul.nav-menu {
-    list-style-type: none;
-    position: relative;
-    margin: 0; }
-    #nav-menu-woman ul.nav-menu li {
-      display: inline-block;
-      width: 5em; }
-      #nav-menu-woman ul.nav-menu li:hover {
-        background: #f2f2f2; }
-        #nav-menu-woman ul.nav-menu li:hover ul {
-          display: block;
-          width: 100%; }
-      #nav-menu-woman ul.nav-menu li a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        padding: 0.3em; }
-    #nav-menu-woman ul.nav-menu ul.dropdown {
-      display: none;
-      position: absolute; }
-      #nav-menu-woman ul.nav-menu ul.dropdown li {
-        display: block;
-        background: #f2f2f2;
-        z-index: 1000; }
-        #nav-menu-woman ul.nav-menu ul.dropdown li a:hover {
-          color: #099; }
-
-#nav-menu-man {
-  background-color: inherit; }
-  #nav-menu-man ul.nav-menu {
-    list-style-type: none;
-    position: relative;
-    margin: 0; }
-    #nav-menu-man ul.nav-menu li {
-      display: inline-block;
-      width: 4em; }
-      #nav-menu-man ul.nav-menu li:hover {
-        background: #f2f2f2; }
-        #nav-menu-man ul.nav-menu li:hover ul {
-          display: block;
-          width: 100%; }
-      #nav-menu-man ul.nav-menu li a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        padding: 0.3em; }
-    #nav-menu-man ul.nav-menu ul.dropdown {
-      display: none;
-      position: absolute; }
-      #nav-menu-man ul.nav-menu ul.dropdown li {
-        display: block;
-        background: #f2f2f2;
-        z-index: 1000; }
-        #nav-menu-man ul.nav-menu ul.dropdown li a:hover {
-          color: #099; }
-
-#nav-menu-clearance {
-  background-color: inherit; }
-  #nav-menu-clearance ul.nav-menu {
-    list-style-type: none;
-    position: relative;
-    margin: 0; }
-    #nav-menu-clearance ul.nav-menu li {
-      display: inline-block;
-      width: 6em; }
-      #nav-menu-clearance ul.nav-menu li:hover {
-        background: #f2f2f2; }
-        #nav-menu-clearance ul.nav-menu li:hover ul {
-          display: block;
-          width: 100%; }
-      #nav-menu-clearance ul.nav-menu li a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        padding: 0.3em; }
-    #nav-menu-clearance ul.nav-menu ul.dropdown {
-      display: none;
-      position: absolute; }
-      #nav-menu-clearance ul.nav-menu ul.dropdown li {
-        display: block;
-        background: #f2f2f2;
-        z-index: 1000; }
-        #nav-menu-clearance ul.nav-menu ul.dropdown li a:hover {
-          color: #099; }
+#top-slider {
+  background: #f6f3ec; }
+  #top-slider .top-slider-img {
+    float: right; }
 
 /*# sourceMappingURL=style.css.map */
