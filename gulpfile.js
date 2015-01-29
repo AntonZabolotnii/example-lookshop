@@ -8,10 +8,18 @@ var gulp = require("gulp"),
 	browserSync = require("browser-sync"),
 	autoprefixer = require("gulp-autoprefixer"),
 	minifyCSS = require('gulp-minify-css'),
-	minifyHTML = require('gulp-minify-html');
+	minifyHTML = require('gulp-minify-html'),
+	es = require("event-stream"),
+	order = require("gulp-order"),
+	jshint = require("gulp-jshint");
 	// sourcemaps = require("gulp-sourcemaps")
 
+var jQuery = "bower_components/jquery/dist/jquery.min.js",
+	bootstrapJs = "bower_components/bootstrap/dist/js/bootstrap.min.js", 
+	mainJs = "js/main.js";
 
+var jsDependencies = [jQuery, bootstrapJs, mainJs];
+ 
 gulp.task("sass", function() {
 	return gulp.src("styles/style.sass")
 	.pipe(sass())
@@ -74,6 +82,30 @@ gulp.task('minify-html', function() {
     	.pipe(gulp.dest('dist'));
 });
 
-gulp.task("build", ["minify-css", "minify-html"]);
+gulp.task("minify-js", function() {
+
+	// var main = gulp.src(jsDependencies[jsDependencies.length-1])
+	// 			.pipe(jshint())
+	// 			.pipe(uglify());
+
+	// var libs = gulp.src(jsDependencies.slice(0,jsDependencies.length-1))
+	// 			.pipe(order(jsDependencies));
+
+	// return es.merge(libs, main)
+	// 		.pipe(order(jsDependencies))
+	// 		.pipe(concat("main.js"))
+	// 		.pipe(gulp.dest("dist/js"));
+
+	// console.log(jsDependencies);
+
+	return gulp.src(jsDependencies)
+			.pipe(order(jsDependencies))
+			.pipe(jshint())
+			.pipe(uglify())
+			.pipe(concat("main.js"))
+			.pipe(gulp.dest("dist/js"));
+});
+
+gulp.task("build", ["minify-css", "minify-html", "minify-js"]);
 
 gulp.task("default", ["watch", "browser-sync"]);

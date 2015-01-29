@@ -1,4 +1,5 @@
 // @import url("reset.css")
+// @import url("fonts.css")
 
 // main-grid
 $main-width: 1200px
@@ -17,7 +18,7 @@ html
 
 body 
 	font-family: Arial, sans-serif !important
-	
+	background: url("http://subtlepatterns.com/patterns/felt.png") 
 
 // GENERAL
 .container-fluid
@@ -28,9 +29,6 @@ body
 
 .no-padding
 	padding: 0
-
-// .dropdown:hover .dropdown-menu 
-// 	display: block
 
 #top-nav
 	color: white
@@ -102,6 +100,7 @@ $cart-border: 2px solid rgb(214,214,214)
 $cart-width: 220px
 $cart-height: 65px
 $cart-font-color: #949393
+
 #menu-nav
 	background: white
 	color: black
@@ -112,7 +111,12 @@ $cart-font-color: #949393
 		margin: 0
 		border: none
 	a
-		color: inherit		
+		color: inherit	
+	.navbar-header
+		margin-top: 18px	
+	#main-nav
+		margin-top: 20px
+		
 	.cart-container
 		border: $cart-border
 		box-sizing: content-box
@@ -163,11 +167,59 @@ $cart-font-color: #949393
 			z-index: 1
 			&:hover
 				cursor: pointer
-				
+			
 #top-slider
-	background: rgb(246,243,236) 
-	.top-slider-img
-		float: right
-
-
+	position: relative
+	background: rgb(246,243,236)
+	.top-slider-img		
+		margin-left: 7.6%		
+	.container
+		.main-text-container	
+			margin: 10%
+			margin-right: 0
+			// width: 100%
+			position: relative
+			
+			$btn-color: #fd926d
+			$btn-border-color: #dd6b44
+			.btn-shop-now
+				display: block
+				color: white
+				margin: 30px auto
+				background: $btn-color
+				text-transform: uppercase
+				border: none
+				border-bottom: 5px solid $btn-border-color
+				outline: none
+				font-family: "Helvetica"
+				font-size: 0.86em
+				text-align: center
+				width: 156px
+				height: 54px
+	.nav-btn
+		background: rgb(255, 255, 255) 
+		height: 117px
+		opacity: .9
+		position: absolute
+		cursor: pointer
+		top: 33%
+		width: 30px
+		z-index: 2
+		.glyphicon
+			opacity: .2
+			position: absolute
+			top: 44%
+		.glyphicon-chevron-left
+			left: 25%	
+		.glyphicon-chevron-right
+			right: 25%
+	#nav-btn-left	
+		left: 0
+	#nav-btn-right
+		right: 0
+		
+		
+@media only screen and (max-width: 640px) 
+	#top-slider
+		display: none
 
